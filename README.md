@@ -30,8 +30,7 @@ void loop(){
 }
 ```
 
-## Controlar apenas em frente e marcha atrás
-Código inicial
+## Controlar apenas o movimento em frente e marcha atrás
 
 ```
 int E1 = 3;  
