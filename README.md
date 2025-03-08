@@ -1,11 +1,9 @@
 # tanque
-Tanque controlado por BT
+O código apresentado aqui pretende ser usado para controlar um tanque através de telemóvel com recurso ao bluetooth (BT)
 
 ## Introdução ao BT
 
-| Código | 
-| ----------- | 
-| /*
+/*
  Controlar o LED com o BT
 */
 
@@ -28,12 +26,13 @@ void loop(){
   else if(comando =='2'){digitalWrite(LED,LOW);};
   } else {digitalWrite(LED,LOW);};
    delay(50);                  	// espera 0,05 s
-}|
+}
 
 
 ## Controlar apenas em frente e marcha atrás
 Código inicial
-'int E1 = 3;  
+´´´
+int E1 = 3;  
 int M1 = 12;
 int E2 =11;                        
 int M2 = 13;                          
@@ -65,7 +64,7 @@ if( BT == '2' ) {
     analogWrite(E2, 100);   
     delay(50);
 }
-'
+```
 
 References:
 https://wiki.keyestudio.com/Ks0007_keyestudio_L298P_Motor_Shield
