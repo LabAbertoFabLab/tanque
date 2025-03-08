@@ -71,3 +71,4 @@ if( BT == '2' ) {
 
 > References:
 > https://wiki.keyestudio.com/Ks0007_keyestudio_L298P_Motor_Shield
+> https://projecthub.arduino.cc/drone_proton/bluetooth-controlled-rc-tank-d22a82 
