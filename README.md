@@ -1,4 +1,4 @@
-# tanque
+# Tanque
 O código apresentado aqui pretende ser usado para controlar um tanque através de telemóvel com recurso ao bluetooth (BT)
 
 ## Introdução ao BT
