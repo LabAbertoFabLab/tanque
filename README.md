@@ -2,7 +2,8 @@
 O código apresentado aqui pretende ser usado para controlar um tanque através de telemóvel com recurso ao bluetooth (BT)
 
 ## Introdução ao BT
-
+Nesta parte iremos controlar o LED com o telemóvel através de BT.
+```
 /*
  Controlar o LED com o BT
 */
@@ -27,11 +28,11 @@ void loop(){
   } else {digitalWrite(LED,LOW);};
    delay(50);                  	// espera 0,05 s
 }
-
+´´´
 
 ## Controlar apenas em frente e marcha atrás
 Código inicial
-´´
+
 int E1 = 3;  
 int M1 = 12;
 int E2 =11;                        
