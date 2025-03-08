@@ -3,7 +3,9 @@ Tanque controlado por BT
 
 ## Introdução ao BT
 
-/*
+| Código | 
+| ----------- | 
+| /*
  Controlar o LED com o BT
 */
 
@@ -26,7 +28,8 @@ void loop(){
   else if(comando =='2'){digitalWrite(LED,LOW);};
   } else {digitalWrite(LED,LOW);};
    delay(50);                  	// espera 0,05 s
-}
+}|
+
 
 ## Controlar apenas em frente e marcha atrás
 Código inicial
