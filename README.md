@@ -31,7 +31,7 @@ void loop(){
 
 ## Controlar apenas em frente e marcha atrás
 Código inicial
-´´´
+´´
 int E1 = 3;  
 int M1 = 12;
 int E2 =11;                        
@@ -64,7 +64,7 @@ if( BT == '2' ) {
     analogWrite(E2, 100);   
     delay(50);
 }
-```
+``
 
 References:
 https://wiki.keyestudio.com/Ks0007_keyestudio_L298P_Motor_Shield
