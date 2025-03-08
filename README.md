@@ -50,13 +50,14 @@ void loop()
 {
  if (Serial.available() > 0) {
 char BT = Serial.read();
-Serial.println(BT);
+//Serial.println(BT);
+}
 
 if( BT == '1' ) {
     digitalWrite(M1,HIGH);  //direção frente
     digitalWrite(M2, HIGH); //direção frente     
-    analogWrite(E1, 100);   // PWM velocidade
-    analogWrite(E2, 100);   // PWM velocidade
+    analogWrite(E1, 100);   // PWM velocidade, usar valor entre 0 e 255
+    analogWrite(E2, 100);   // PWM velocidade, usar valor entre 0 e 255
     delay(50);
     }
 if( BT == '2' ) {    
