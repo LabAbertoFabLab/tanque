@@ -29,13 +29,16 @@ void loop(){
 }
 ```
 
-## Controlar apenas o movimento em frente e marcha atrás
+## Controlar apenas o movimento 
 
 ```
-int E1 = 3;  
+//Controlar um tanque de lagartas em dois movimentos apenas, para a frente e marcha atrás
+int V1 = 3;  
 int M1 = 12;
-int E2 =11;                        
-int M2 = 13;                          
+int V2 = 11;                        
+int M2 = 13; 
+
+char comando;
 
 void setup()
 {
@@ -44,27 +47,36 @@ void setup()
     Serial.begin(9600);
 }
 
-void loop()
-{
- if (Serial.available() > 0) {
-char BT = Serial.read();
-//Serial.println(BT);
+void loop(){
+
+Serial.write (comando = '0');// escreve na comunicação serial o comando de parar
+
+if (Serial.available() > 0) {
+comando = Serial.read();
 }
 
-if( BT == '1' ) {
+if( comando == '1' ) {
     digitalWrite(M1,HIGH);  //direção frente
     digitalWrite(M2, HIGH); //direção frente     
-    analogWrite(E1, 100);   // PWM velocidade, usar valor entre 0 e 255
-    analogWrite(E2, 100);   // PWM velocidade, usar valor entre 0 e 255
-    delay(50);
+    analogWrite(V1, 150);   // PWM velocidade, usar valor entre 0 e 255
+    analogWrite(V2, 150);   // PWM velocidade, usar valor entre 0 e 255
+    delay(1000); //avança 1s
     }
-if( BT == '2' ) {    
+if( comando == '2' ) {    
     digitalWrite(M1,LOW);  
     digitalWrite(M2, LOW);      
-    analogWrite(E1, 100);   
-    analogWrite(E2, 100);   
+    analogWrite(V1, 150);   
+    analogWrite(V2, 150);   
+    delay(1000);
+
+} else if( comando == '0' ) {     
+    analogWrite(V1, 0);   // pára
+    analogWrite(V2, 0);   // pára
     delay(50);
+    }
+//Serial.println(comando); //testar
 }
+
 ```
 
 > References:
