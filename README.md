@@ -23,10 +23,9 @@ void setup() {
 // a função loop está sempre a funcionar
 void loop(){
   comando = Serial.read();
-  if (comando =='1'){digitalWrite(LED,HIGH);}
-  else if(comando =='2'){digitalWrite(LED,LOW);
-  };
-   delay(50);                  	// espera 0,05 s
+  if (comando =='1'){digitalWrite(LED,HIGH);} 
+  else if (comando =='2'){digitalWrite(LED,LOW);}
+  delay(50);                  	// espera 0,05 s
 }
 ```
 
